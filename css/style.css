@@ -1,0 +1,25 @@
+.zipcodetext {
+	
+		/* Css for message text */
+		font-size: 18px;
+		
+}
+
+input[type=text]{
+	
+		/* Css for the form text box*/
+		
+}
+
+input[type=text]:focus {
+	
+		/* Css for when the form text box gets focus*/
+		
+}
+
+input[type=submit] {
+	
+		/* Css for the submit button */	
+		font-size: 18px;
+		
+}

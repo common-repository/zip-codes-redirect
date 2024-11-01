@@ -1,0 +1,62 @@
+{
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+    "preferredVersions": {
+        "php": "8.0",
+        "wp": "latest"
+    },
+    "phpExtensionBundles": [
+        "kitchen-sink"
+    ],
+    "features": {
+        "networking": true
+    },
+	"landingPage": "\/wp-admin\/edit.php?post_type=page",
+    "steps": [
+        {
+            "step": "installPlugin",
+            "pluginZipFile": {
+                "resource": "url",
+                "url": "https:\/\/downloads.wordpress.org\/plugin\/zip-codes-redirect.5.1.9.zip"
+            },
+            "options": {
+                "activate": true
+            }
+        },
+        {
+            "step": "login",
+            "username": "admin",
+            "password": "password"
+         },
+        {
+            "step": "installTheme",
+            "themeZipFile": {
+                "resource": "wordpress.org/themes",
+                "slug": "astra"
+            },
+            "options": {
+                "activate": true
+            }
+        },
+		
+		{
+            "step": "setSiteOptions",
+            "options": {
+                "blogname": "Zipcode Redirect inc Postcode Redirect",
+                "blogdescription": "Zipcode Redirect",
+                "users_can_register": "0",
+                "admin_email": "dev-email@wpengine.local",
+                "start_of_week": "1",
+                "use_balanceTags": "0",
+                "use_smilies": "1",
+                "require_name_email": "1",
+                "comments_notify": "1",
+                "posts_per_rss": "10"
+            }
+        }
+		
+    ]
+	
+	
+	
+
+}
